@@ -1,4 +1,5 @@
-import { Route, Routes, Router, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
+import React from 'react';
 import './App.css';
 import Home from './Home';
 import About from './About';
@@ -7,10 +8,14 @@ function App() {
   
   return (
     <div>
-      <Routes>
-      <Route exact path = "/" component={Home} />
-      <Route path="/about" component={About} />
-      </Routes>
+      <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/about" element={ <About /> } />
+        </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
