@@ -14,7 +14,10 @@ function MenuBar() {
 	];
 
 	return (
-		<div className='menubars'>
+		<div className={pathName === '/' ? 'menubars' : 
+		(pathName === '/about' ? 'menubars_about' : 'menubars_member'
+		
+		)}>
 			{menus.map((menu, index) => {
 				return (
 					<div className='menuitems'>

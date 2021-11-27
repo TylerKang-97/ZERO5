@@ -4,7 +4,18 @@
     border: none;
 
 }
+.menubars_about {
+    background:orange;
+    display: flex;
+    border: none;
 
+}
+
+.menubars_member {
+    background:#232526;
+    display: flex;
+    border: none;
+}
 .menuitems{
     margin-left: 2%;
     color:powderblue;
