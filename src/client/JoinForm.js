@@ -1,8 +1,17 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const JoinForm = () => {
-	const [types, setTypes] = useState([{}]);
+	const navigate = useNavigate();
+
+	const [error, setError] = useState('');
+	const [types, setTypes] = useState([
+		{
+			type: 999,
+			name: 'test',
+		},
+	]);
 	const [init, setInit] = useState(false);
 
 	useEffect(() => {
@@ -55,9 +64,14 @@ const JoinForm = () => {
 		})
 			.then((res) => res.json())
 			.then((json) => {
-				console.log('json (57번줄): ', json);
+				if (json.result === 'SUCCEED') {
+					alert('회원 가입이 성공적으로 되었습니다. 로그인하세요.');
+					navigate('/login');
+				} else {
+					setError('Something Happened!');
+				}
 			});
-		console.log(joinObj);
+		// console.log(joinObj);
 	};
 
 	return (
@@ -86,7 +100,9 @@ const JoinForm = () => {
 									<td>
 										<select name='type'>
 											{types.map((m) => (
-												<option value={m.type}>{m.name}</option>
+												<option key={m.type} value={m.type}>
+													{m.name}
+												</option>
 											))}
 										</select>
 									</td>
@@ -126,12 +142,17 @@ const JoinForm = () => {
 										</button>
 									</td>
 									<td>
-										<button style={{ width: '100%' }}>취소</button>
+										<button
+											style={{ width: '100%' }}
+											onClick={() => navigate(-1)}>
+											취소
+										</button>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</form>
+					{error}
 				</div>
 			) : (
 				<div>initializing... plz wait...</div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 	const [id, setId] = useState('');
@@ -11,10 +12,6 @@ const Login = () => {
 	const handlePwChange = (e) => {
 		setPassword(e.target.value);
 		console.log(`password: ${password}`);
-	};
-
-	const goToJoin = () => {
-		console.log('회원가입하기 버튼');
 	};
 
 	const login = (e) => {
@@ -41,7 +38,13 @@ const Login = () => {
 					</div>
 					<div>
 						<button type='submit'>로그인</button>
-						<button onClick={goToJoin}>회원가입</button>
+
+						<Link
+							to='/joinForm'
+							key='0'
+							style={{ textDecoration: 'none', color: 'white' }}>
+							<button>회원가입</button>
+						</Link>
 					</div>
 				</form>
 			</div>
