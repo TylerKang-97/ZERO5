@@ -1,0 +1,24 @@
+.menubars{
+    background: linear-gradient(to left, #C33764, #1D2671);
+    display: flex;
+    border: none;
+
+}
+
+.menuitems{
+    margin-left: 2%;
+    color:powderblue;
+}
+
+link:visited{
+    text-decoration: none;
+}
+
+.menuitems :hover{
+    color:orchid;
+}
+
+p :visited {
+    text-decoration: none;
+    color: powderblue;
+}

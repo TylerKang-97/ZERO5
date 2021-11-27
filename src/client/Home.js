@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Items from '../info/Items';
+import About from './About';
 // import { makeStyles } from '@material-ui/core/styles';
 
 const Home = () => {
@@ -25,10 +27,13 @@ const Home = () => {
 			});
 	};
 	return (
+		<>
 		<div>
-			<h1>Home Pages</h1>
-			<button onClick={getAward}>getAward</button>
+			<Items />
+			<About />
+			{/*<button onClick={getAward}>getAward</button> */}
 		</div>
+		</>
 	);
 };
 

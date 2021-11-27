@@ -1,0 +1,19 @@
+.gradation {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to left, #C33764, #1D2671);
+    color:lavenderblush;
+    text-align: center;
+}
+
+.info_h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 100px;
+}
+
+.info_p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+}

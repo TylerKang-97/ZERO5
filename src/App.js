@@ -5,11 +5,13 @@ import Home from './client/Home';
 import About from './client/About';
 import Login from './client/Login';
 import JoinForm from './client/JoinForm';
+import MenuBar from './menubar/MenuBar';
 
 function App() {
 	return (
 		<div>
 			<BrowserRouter>
+			<MenuBar />
 				<div>
 					<Routes>
 						<Route path='/' element={<Home />} />
