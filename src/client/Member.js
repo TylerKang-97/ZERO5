@@ -1,42 +1,81 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
 import '../css/Team.css';
+import { db, dbStorage } from '../fBase';
+
 import MemberInfo from '../info/MemberInfo';
 
 const Member = () => {
 	const [id, setId] = useState('');
+	const [members, setMembers] = useState([{}]);
+	const [init, setInit] = useState(false);
 	const { pathname } = useLocation();
+
+	useEffect(async () => {
+		const querySnapshot = await getDocs(collection(db, 'members'));
+		let tmpObj = [];
+		querySnapshot.forEach((doc) => {
+			if (doc.data().name.length > 1) tmpObj.push(doc.data());
+		});
+
+		setMembers(tmpObj);
+		setInit(true);
+	}, []);
+
 	const onclickes = (e) => {
-		let id = e.target.__reactProps$m3yb4nwemhk.children[0];
-		console.log(e.target.__reactProps$m3yb4nwemhk.children[0]);
+		let id = e.target.id;
+		console.log(e.target.id);
 
 		setId(id);
-		console.log('id', id);
 	};
-	const teams = [
-		{ name: '강신영', id: 1 },
-		{ name: '고영일', id: 2 },
-		{ name: '송주영', id: 3 },
-		{ name: '김찬영', id: 4 },
-		{ name: '김도영', id: 5 },
-		{ name: '김혜린', id: 6 },
-		{ name: '김광현', id: 7 },
-		{ name: '정도원', id: 8 },
-		{ name: '이유잔', id: 9 },
-	];
 
 	return (
 		<>
-			{console.log(teams)}
-			<div className='team_background'>
-				<Link to='/member' style={{ textDecoration: 'none', color: 'black' }}>
+			{init ? (
+				<>
+					<div className='team_background'>
+						<Link
+							to='/member'
+							style={{ textDecoration: 'none', color: 'black' }}>
+							<h1 className='team_h1'>Member</h1>
+							<div
+								style={{
+									display: 'flex',
+									flexDirection: 'row',
+									justifyContent: 'space-around',
+								}}>
+								{members.map((m) => (
+									<span onClick={onclickes} id={m.name}>
+										<img
+											src={m.profileImg}
+											style={{
+												width: '10vw',
+												height: '10vw',
+												borderRadius: '70%',
+											}}
+											alt='profile'
+											id={m.name}
+											onClick={onclickes}
+										/>
+
+										<h3 id={m.name} onClick={onclickes}>
+											{m.role}
+										</h3>
+										{m.name}
+									</span>
+								))}
+							</div>
+						</Link>
+					</div>
+					{pathname === '/member' ? <MemberInfo id={id} /> : null}
+				</>
+			) : (
+				<div className='team_background'>
 					<h1 className='team_h1'>Member</h1>
-					{teams.map((t) => (
-						<span onClick={onclickes}>{t.name} &nbsp; </span>
-					))}
-				</Link>
-			</div>
-			{pathname === '/member' ? <MemberInfo id={id} /> : null}
+					<h2>loading...</h2>
+				</div>
+			)}
 		</>
 	);
 };
