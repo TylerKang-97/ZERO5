@@ -5,7 +5,7 @@
 
 }
 .menubars_about {
-    background:orange;
+    background:linear-gradient(to left, #f12711, #f5af19);
     display: flex;
     border: none;
 

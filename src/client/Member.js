@@ -1,72 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import personImg from '../img/personImg.jpg';
-import { collection, doc, getDocs } from 'firebase/firestore';
 import '../css/Team.css';
-import { db, dbStorage } from '../fBase';
+import MemberInfo from '../info/MemberInfo';
 
 const Member = () => {
-	const [members, setMembers] = useState([{}]);
-	const [init, setInit] = useState(false);
-	useEffect(async () => {
-		const querySnapshot = await getDocs(collection(db, 'members'));
-		let tmpObj = [];
-		querySnapshot.forEach((doc) => {
-			if (doc.data().name.length > 1) tmpObj.push(doc.data());
-		});
-
-		setMembers(tmpObj);
-	}, []);
+	const [id, setId] = useState('');
 	const { pathname } = useLocation();
+	const onclickes = (e) => {
+		let id = e.target.__reactProps$m3yb4nwemhk.children[0];
+		console.log(e.target.__reactProps$m3yb4nwemhk.children[0]);
 
-	const addMember = async (event) => {
-		event.preventDefault();
-		const data = new FormData(event.target);
-		const storageRef = dbStorage;
-		console.log(storageRef);
-		const memObj = {
-			key: data.get('key'),
-			name: data.get('name'),
-			role: data.get('role'),
-		};
-		console.log(data.get('profileImg'));
-		console.log(data.get('key').length >= 2);
-		try {
-			// const docRef = await addDoc(collection(db, 'members'), memObj);
-			// console.log('Document written with ID: ', docRef.id);
-		} catch (e) {
-			console.error('Error adding document: ', e);
-		}
+		setId(id);
+		console.log('id', id);
 	};
+	const teams = [
+		{ name: '강신영', id: 1 },
+		{ name: '고영일', id: 2 },
+		{ name: '송주영', id: 3 },
+		{ name: '김찬영', id: 4 },
+		{ name: '김도영', id: 5 },
+		{ name: '김혜린', id: 6 },
+		{ name: '김광현', id: 7 },
+		{ name: '정도원', id: 8 },
+		{ name: '이유잔', id: 9 },
+	];
+
 	return (
-		<div className='team_background'>
-			<Link to='/member' style={{ textDecoration: 'none', color: 'black' }}>
-				<h1 className='team_h1'>Member</h1>
-				<p>강신영 고영일 김찬영 송주영 김도영 김광현 김혜린 정도원 이유진</p>
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'row',
-						justifyContent: 'space-around',
-					}}>
-					{members.map((m) => (
-						<div>
-							<h2>{m.name}</h2>
-							<img
-								src={m.profileImg}
-								style={{
-									width: '10vw',
-									height: '10vw',
-									borderRadius: '70%',
-								}}
-								alt='profile'
-							/>
-							<h3>{m.role}</h3>
-						</div>
+		<>
+			{console.log(teams)}
+			<div className='team_background'>
+				<Link to='/member' style={{ textDecoration: 'none', color: 'black' }}>
+					<h1 className='team_h1'>Member</h1>
+					{teams.map((t) => (
+						<span onClick={onclickes}>{t.name} &nbsp; </span>
 					))}
-				</div>
-			</Link>
-		</div>
+				</Link>
+			</div>
+			{pathname === '/member' ? <MemberInfo id={id} /> : null}
+		</>
 	);
 };
 
