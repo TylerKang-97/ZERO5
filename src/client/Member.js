@@ -9,6 +9,7 @@ import MemberInfo from '../info/MemberInfo';
 const Member = () => {
 	const [id, setId] = useState('');
 	const [members, setMembers] = useState([{}]);
+	const [selectedMember, setSelectedMember] = useState({});
 	const [init, setInit] = useState(false);
 	const { pathname } = useLocation();
 
@@ -26,6 +27,10 @@ const Member = () => {
 	const onclickes = (e) => {
 		let id = e.target.id;
 		console.log(e.target.id);
+
+		members.forEach((mem) => {
+			if (id === mem.name) setSelectedMember(mem);
+		});
 
 		setId(id);
 	};
@@ -68,7 +73,9 @@ const Member = () => {
 							</div>
 						</Link>
 					</div>
-					{pathname === '/member' ? <MemberInfo id={id} /> : null}
+					{pathname === '/member' ? (
+						<MemberInfo memberName={id} member={selectedMember} />
+					) : null}
 				</>
 			) : (
 				<div className='team_background'>
