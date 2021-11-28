@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-.env
+
 
 
 # etc ...
@@ -12,6 +12,9 @@
 /src/img
 # testing
 /coverage
+
+# firebase
+/src/fBase.js
 
 # production
 /build
