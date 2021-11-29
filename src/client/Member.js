@@ -44,30 +44,26 @@ const Member = () => {
 							to='/member'
 							style={{ textDecoration: 'none', color: 'black' }}>
 							<h1 className='team_h1'>Member</h1>
-							<div
-								style={{
-									display: 'flex',
-									flexDirection: 'row',
-									justifyContent: 'space-around',
-								}}>
+							<div className="team_image_display">
 								{members.map((m) => (
 									<span onClick={onclickes} id={m.name}>
 										<img
 											src={m.profileImg}
 											style={{
-												width: '10vw',
-												height: '10vw',
+												width: '12vw',
+												height: '12vw',
 												borderRadius: '70%',
+												
 											}}
 											alt='profile'
 											id={m.name}
 											onClick={onclickes}
 										/>
 
-										<h3 id={m.name} onClick={onclickes}>
+										<h3 id={m.name} onClick={onclickes} className="team_h3">
 											{m.role}
 										</h3>
-										{m.name}
+										<p className="team_p">{m.name}</p>
 									</span>
 								))}
 							</div>
