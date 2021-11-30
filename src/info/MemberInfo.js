@@ -8,14 +8,17 @@ const MemberInfo = ({ member }) => {
 			{member === {} ? null : (
 				<>
 					<h1 className='team_h1'>{member.name}</h1>
-					<div>
+					<div className='team_info_detail'>
 						<h2>{member.role}</h2>
-						<h3>
-							<img
-								src={member.profileImg}
-								style={{ width: '20vw', height: '20vw' }}
-							/>
-						</h3>
+
+						<img
+							src={member.profileImg}
+							style={{
+								width: '20vw',
+								height: '20vw',
+								borderRadius: '40%',
+							}}
+						/>
 					</div>
 				</>
 			)}
