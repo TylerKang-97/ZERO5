@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	/* flex-wrap: wrap; */
+}
+
+.container__elements {
+	flex: 1;
+}
