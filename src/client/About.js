@@ -14,7 +14,7 @@ const About = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 1
       };
     return(
         <>
@@ -46,12 +46,11 @@ const About = () => {
                     </div>
 
                     <div className="about_carousel">
-                    <h3>5</h3>
+                    <h3 className="about_carousel_h1">디지털 점자책</h3>
+                    <p className="about_carousel_p">스마트폰과 점자모듈을 결합한 보조 시스템</p>
                     </div>
 
-                    <div className="about_carousel">
-                    <h3>6</h3>
-                    </div>
+                    
                 
       </Slider>
         </div>
