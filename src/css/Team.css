@@ -1,14 +1,44 @@
 .team_background {
 	width: 100%;
-	height: 500px;
+	height: 700px;
 	background: linear-gradient(to right, #8e9eab, #eef2f3);
 	text-align: center;
+}
+@media screen and (max-width: 768px) {
+	.team_background {
+		height: 800px;
+	}
+
+	.team_image_reacting {
+		width: 15vw;
+		height: 15vw;
+		border-radius: 70%;
+	}
 }
 
 .team_h1 {
 	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 100px;
+	margin-bottom: 10;
+	font-size: 300px;
+}
+.team_h3 {
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+.team_p {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.team_image {
+	width: '10vw';
+	height: '10vw';
+	border-radius: 70%;
+}
+
+.team_image_display {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+	gap: var(--m2);
 }
 
 .team_info_background {
