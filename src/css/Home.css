@@ -1,4 +1,5 @@
 .container {
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -8,5 +9,6 @@
 }
 
 .container__elements {
+	width: 100%;
 	flex: 1;
 }

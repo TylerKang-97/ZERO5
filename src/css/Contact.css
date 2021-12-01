@@ -4,6 +4,12 @@
     background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
     color:lavenderblush;
     text-align: center;
+    
+}
+.contact_elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .contact_h1 {
@@ -11,3 +17,21 @@
     margin-bottom: 0;
     font-size: 100px;
 }
+.contact_info {
+    font-size: 1.5rem;
+}
+
+.contact_naver {
+    width: 7rem;
+   
+    background: linear-gradient(to left, #38ef7d, #45B649 );
+    border-radius: 20px;
+}
+
+.contact_tel {
+    width: 7rem;
+    margin-left: 10%;
+    background: #56CCF2;
+    border-radius: 20px;
+}
+

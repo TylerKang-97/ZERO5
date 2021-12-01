@@ -36,7 +36,7 @@ const About = () => {
                     </div>
 
                     <div className="about_carousel">
-                    <h3 className="about_carousel_h1">명글 카메라</h3>
+                    <h3 className="about_carousel_h1">띵글 카메라</h3>
                     <p className="about_carousel_p">OCR(광학 문자 인식) 기법을 이용한 안드로이드 APP</p>
                     </div>
 

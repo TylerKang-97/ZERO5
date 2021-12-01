@@ -77,8 +77,8 @@
 	/* margin: 2%; */
 }
 .team_image:hover {
-	width: 7.5rem;
-	height: 7.5rem;
+	transform: translateY(-7px);
+	
 }
 
 .team_info_background {
