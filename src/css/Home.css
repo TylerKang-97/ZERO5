@@ -1,8 +1,10 @@
 .container {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
 	/* flex-wrap: wrap; */
+	overflow: auto;
 }
 
 .container__elements {

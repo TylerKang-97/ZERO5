@@ -15,7 +15,7 @@ const Home = () => {
 			<div className='container__elements'>
 				<About />
 			</div>
-			<div className='container__elements'>
+			<div>
 				<Member />
 			</div>
 			<div className='container__elements'>

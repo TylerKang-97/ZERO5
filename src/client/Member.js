@@ -52,15 +52,13 @@ const Member = () => {
 							style={{ textDecoration: 'none', color: 'black' }}>
 							<h1 className='team_h1'>Member</h1>
 						</Link>
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'row',
-								flex: 1,
-							}}>
+						<div className='team_list_container'>
+							{id !== '' ? (
+								<MemberInfo memberName={id} member={selectedMember} />
+							) : null}
 							<div className='team_image_display'>
 								{members.map((m) => (
-									<div style={{ margin: '2%' }}>
+									<div key={m.name} style={{ margin: '2%' }}>
 										<span onClick={onclickes} id={m.name}>
 											<img
 												src={m.profileImg}
@@ -74,10 +72,6 @@ const Member = () => {
 									</div>
 								))}
 							</div>
-
-							{id !== '' ? (
-								<MemberInfo memberName={id} member={selectedMember} />
-							) : null}
 						</div>
 					</div>
 				</>
