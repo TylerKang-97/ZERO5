@@ -29,7 +29,9 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"server": "nodemon ./src/server/server.js",
-		"dev": "concurrently --kill-others \"yarn run server\" \"react-scripts start\""
+		"dev": "concurrently --kill-others \"yarn run server\" \"react-scripts start\"",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -48,5 +50,12 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	}
+	},
+	"devDependencies": {
+		"gh-pages": "3.2.3"
+	},
+
+	"homepage": "http://TylerKang-97.github.io/ZERO5"
+
+
 }
