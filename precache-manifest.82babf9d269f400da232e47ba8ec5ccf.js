@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e295822cb0ed5cc8ce5b20bebf81ece8",
+    "revision": "10fd0be7819dddbec95ad292e6c284a6",
     "url": "http://TylerKang-97.github.io/ZERO5/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "http://TylerKang-97.github.io/ZERO5/static/css/2.bf3a3c8d.chunk.css"
   },
   {
-    "revision": "be1d8b69304b73babd58",
+    "revision": "064876cc45a7b99a91e8",
     "url": "http://TylerKang-97.github.io/ZERO5/static/css/main.411fdef1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "http://TylerKang-97.github.io/ZERO5/static/js/2.b0cc48de.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "be1d8b69304b73babd58",
-    "url": "http://TylerKang-97.github.io/ZERO5/static/js/main.90dd9fee.chunk.js"
+    "revision": "064876cc45a7b99a91e8",
+    "url": "http://TylerKang-97.github.io/ZERO5/static/js/main.4da59781.chunk.js"
   },
   {
     "revision": "48295f1e09e80f5b75f4",
