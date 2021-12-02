@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ZERO5/static/css/main.411fdef1.chunk.css",
+    "main.js": "/ZERO5/static/js/main.e87bdd87.chunk.js",
+    "main.js.map": "/ZERO5/static/js/main.e87bdd87.chunk.js.map",
+    "runtime-main.js": "/ZERO5/static/js/runtime-main.f247c263.js",
+    "runtime-main.js.map": "/ZERO5/static/js/runtime-main.f247c263.js.map",
+    "static/css/2.32f39b84.chunk.css": "/ZERO5/static/css/2.32f39b84.chunk.css",
+    "static/js/2.b31cf970.chunk.js": "/ZERO5/static/js/2.b31cf970.chunk.js",
+    "static/js/2.b31cf970.chunk.js.map": "/ZERO5/static/js/2.b31cf970.chunk.js.map",
+    "index.html": "/ZERO5/index.html",
+    "precache-manifest.f86ac93a6ceb7383bc0fc536073a8374.js": "/ZERO5/precache-manifest.f86ac93a6ceb7383bc0fc536073a8374.js",
+    "service-worker.js": "/ZERO5/service-worker.js",
+    "static/css/2.32f39b84.chunk.css.map": "/ZERO5/static/css/2.32f39b84.chunk.css.map",
+    "static/css/main.411fdef1.chunk.css.map": "/ZERO5/static/css/main.411fdef1.chunk.css.map",
+    "static/js/2.b31cf970.chunk.js.LICENSE.txt": "/ZERO5/static/js/2.b31cf970.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/ZERO5/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f247c263.js",
+    "static/css/2.32f39b84.chunk.css",
+    "static/js/2.b31cf970.chunk.js",
+    "static/css/main.411fdef1.chunk.css",
+    "static/js/main.e87bdd87.chunk.js"
+  ]
+}
