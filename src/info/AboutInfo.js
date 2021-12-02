@@ -13,7 +13,7 @@ const AboutInfo = () => {
                 </div>
                 <div className="about_right_side">
                     <h2>2021.04 팀개설</h2>
-                    <h2>2021.11 청년창업프로그램 선정</h2>
+                    <h2>2021.11 캠퍼스타운 사업단 청년창업프로그램 선정</h2>
                 </div>
             
             </div>
