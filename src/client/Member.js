@@ -32,7 +32,7 @@ const Member = () => {
 		 * 현재 주소가 member인지 판별해 onClick 액션을 다르게.
 		 * ./member가 아니다 = home에서 보이는 member탭이기 때문에 바로 member페이지로 이동시켜준다.
 		 * */
-		if (pathname !== '/member') window.location.href = '/ZERO5/member';
+		if (pathname !== '/member') window.location.href = '/member';
 		else {
 			members.forEach((mem) => {
 				if (id === mem.name) setSelectedMember(mem);

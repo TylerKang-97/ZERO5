@@ -11,7 +11,7 @@ import Member from './client/Member';
 function App() {
 	return (
 		<div>
-			<BrowserRouter basename="/ZERO5">
+			<BrowserRouter>
 			<MenuBar />
 				<div>
 					<Routes>

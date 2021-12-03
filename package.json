@@ -30,7 +30,6 @@
 		"eject": "react-scripts eject",
 		"server": "nodemon ./src/server/server.js",
 		"dev": "concurrently --kill-others \"yarn run server\" \"react-scripts start\""
-		
 	},
 	"eslintConfig": {
 		"extends": [
@@ -50,5 +49,5 @@
 			"last 1 safari version"
 		]
 	}
-	
+
 }
